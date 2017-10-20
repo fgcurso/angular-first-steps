@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TodoItemsService } from '../todo-items.service';
+
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -7,16 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  items : string[] = [
-    'Programar una aplicacion',
-    'Aprender a diseñar paginas',
-    'Aprender angular'
-  ];
+  items : string[] = [];
 
-  constructor() { }
+  constructor(private todoItemsService : TodoItemsService) { }
 
   ngOnInit() {
-    
+    this.items = this.todoItemsService.getItems();
   }
 
   addItem(newItem: string) {

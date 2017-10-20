@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
 import { PersonaComponent } from './persona/persona.component';
+import { TodoItemsService } from './todo-items.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { PersonaComponent } from './persona/persona.component';
     FormsModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    TodoItemsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

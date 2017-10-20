@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 
 @Injectable()
 export class TodoItemsService {
@@ -10,8 +12,8 @@ export class TodoItemsService {
 
   constructor() { }
 
-  getItems() : string[] {
-    return this.items;
+  getItems() : Observable<string[]> {
+    return Observable.of(this.items);
   }
 
 }

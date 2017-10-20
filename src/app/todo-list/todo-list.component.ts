@@ -14,7 +14,9 @@ export class TodoListComponent implements OnInit {
   constructor(private todoItemsService : TodoItemsService) { }
 
   ngOnInit() {
-    this.items = this.todoItemsService.getItems();
+    this.todoItemsService.getItems().subscribe(items => {
+      this.items = items;
+    });
   }
 
   addItem(newItem: string) {

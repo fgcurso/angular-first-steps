@@ -8,13 +8,13 @@ import { UserService } from '../user.service';
 })
 export class UsersComponent implements OnInit {
 
-  users : string[];
+  users : Array<any>;
 
   constructor(private userService : UserService) { }
 
   ngOnInit() {
     this.userService.getAll().subscribe(users => {
-      this.users = users.json().map(value => value.name);
+      this.users = users.json();
     });
   }
 

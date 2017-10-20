@@ -1,4 +1,6 @@
 <h2>User List</h2>
 <ul>
-  <li *ngFor="let user of users">{{ user }}</li>
+  <li *ngFor="let user of users">
+    <app-user [user]="user"></app-user>
+  </li>
 </ul>

@@ -12,13 +12,15 @@ import { PersonaComponent } from './persona/persona.component';
 import { TodoItemsService } from './todo-items.service';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     PersonaComponent,
-    UsersComponent
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

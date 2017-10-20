@@ -1,0 +1,5 @@
+<h2>Editame</h2>
+<p>Hola, soy {{ nombre }}!</p>
+
+<input type="text" [(ngModel)]="nombre">
+<p class="error" *ngIf="!nombre.length">ERROR!!!!!!!!</p>

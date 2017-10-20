@@ -1,7 +1,7 @@
 <div style="width: 50%;">
   <h2>Todo Items</h2>
-  <ul *ngFor="let item of items; let i = index">
-    <li>{{ item }} <a href="#" (click)="deleteItem(i)">X</a></li>
+  <ul>
+    <li *ngFor="let item of items; let i = index">{{ item }} <a href="#" (click)="deleteItem(i)">X</a></li>
   </ul>
   <p *ngIf="!items.length">No hay items! YAY!</p>
 

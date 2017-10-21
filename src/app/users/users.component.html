@@ -1,6 +1,6 @@
 <h2>User List</h2>
 <ul>
-  <li *ngFor="let user of users">
-    <app-user [user]="user"></app-user>
+  <li *ngFor="let user of users; let i = index;">
+    <app-user [user]="user" [index]="i" (onDelete)="deleteUser($event)"></app-user>
   </li>
 </ul>

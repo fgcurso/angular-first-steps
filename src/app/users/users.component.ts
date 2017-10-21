@@ -18,4 +18,8 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  deleteUser(index: number) {
+    this.users.splice(index, 1);
+  }
+
 }

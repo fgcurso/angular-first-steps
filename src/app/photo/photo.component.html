@@ -1,0 +1,8 @@
+<div *ngIf="photo">
+  <h2>{{ photo.title }}</h2>
+  <img [src]="photo.url">
+</div>
+
+<div *ngIf="!photo">
+  Photo not found
+</div>

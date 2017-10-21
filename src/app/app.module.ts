@@ -13,6 +13,9 @@ import { TodoItemsService } from './todo-items.service';
 import { UsersComponent } from './users/users.component';
 import { UserService } from './user.service';
 import { UserComponent } from './user/user.component';
+import { PhotoComponent } from './photo/photo.component';
+import { PhotoListComponent } from './photo-list/photo-list.component';
+import { PhotoService } from './photo.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { UserComponent } from './user/user.component';
     TodoListComponent,
     PersonaComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
+    PhotoComponent,
+    PhotoListComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import { UserComponent } from './user/user.component';
   ],
   providers: [
     TodoItemsService,
-    UserService
+    UserService,
+    PhotoService
   ],
   bootstrap: [AppComponent]
 })

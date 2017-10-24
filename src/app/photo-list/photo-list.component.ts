@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { PhotoService } from '../photo.service';
+import { Photo } from '../photo';
 
 @Component({
   selector: 'app-photo-list',
@@ -11,15 +12,15 @@ export class PhotoListComponent implements OnInit {
   @ViewChild('previewElement')
   private previewEl : ElementRef;
 
-  photos : Array<any>;
+  photos : Photo[];
 
-  selectedPhoto? : any;
+  selectedPhoto? : Photo;
 
   constructor(private service : PhotoService) { }
 
   ngOnInit() : void {
-    this.service.getAll().subscribe((photos) => {
-      this.photos = photos.json();
+    this.service.getAll().subscribe(photos => {
+      this.photos = photos;
     });
   }
 

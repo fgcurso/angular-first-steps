@@ -8,6 +8,6 @@ export class UserService {
   constructor(private http : Http) { }
 
   getAll() : Observable<any> {
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('/json/users.json');
   }
 }

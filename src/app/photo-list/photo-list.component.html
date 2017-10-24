@@ -1,5 +1,5 @@
 <ul>
-  <li *ngFor="let photo of photos"
+  <li *ngFor="let photo of photos | slice:0:10"
     (mouseenter)="onMouseEnter($event, photo)"
     (mouseleave)="onMouseLeave()">
     <a [routerLink]="['/photo', photo.id]">

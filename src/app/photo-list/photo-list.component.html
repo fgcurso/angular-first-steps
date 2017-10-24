@@ -1,5 +1,13 @@
 <ul>
-  <li *ngFor="let photo of photos">
-    <a [routerLink]="['/photo', photo.id]">{{ photo.title }}</a>
+  <li *ngFor="let photo of photos"
+    (mouseenter)="onMouseEnter($event, photo)"
+    (mouseleave)="onMouseLeave()">
+    <a [routerLink]="['/photo', photo.id]">
+      {{ photo.title }}
+    </a>
   </li>
 </ul>
+
+<div class="preview" #previewElement>
+  <img [src]="selectedPhoto.thumbnailUrl" *ngIf="selectedPhoto">
+</div>
